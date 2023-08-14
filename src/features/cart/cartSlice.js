@@ -8,7 +8,7 @@ const initialState = {
 };
 
 export const addToCartAsync = createAsyncThunk(
-  'cart/addToCart',
+  'https://mern-ecommerce-backend-khaki.vercel.app/cart/addToCart',
   async ({item, alert}) => {
     const response = await addToCart(item);
     alert.success('Item Added to Cart');
@@ -19,7 +19,7 @@ export const addToCartAsync = createAsyncThunk(
 );
 
 export const fetchItemsByUserIdAsync = createAsyncThunk(
-  'cart/fetchItemsByUserId',
+  'https://mern-ecommerce-backend-khaki.vercel.app/cart/fetchItemsByUserId',
   async () => {
     const response = await fetchItemsByUserId();
     // The value we return becomes the `fulfilled` action payload
@@ -28,7 +28,7 @@ export const fetchItemsByUserIdAsync = createAsyncThunk(
 );
 
 export const updateCartAsync = createAsyncThunk(
-  'cart/updateCart',
+  'https://mern-ecommerce-backend-khaki.vercel.app/cart/updateCart',
   async (update) => {
     const response = await updateCart(update);
     // The value we return becomes the `fulfilled` action payload
@@ -37,7 +37,7 @@ export const updateCartAsync = createAsyncThunk(
 );
 
 export const deleteItemFromCartAsync = createAsyncThunk(
-  'cart/deleteItemFromCart',
+  'https://mern-ecommerce-backend-khaki.vercel.app/cart/deleteItemFromCart',
   async (itemId) => {
     const response = await deleteItemFromCart(itemId);
     // The value we return becomes the `fulfilled` action payload
@@ -46,7 +46,7 @@ export const deleteItemFromCartAsync = createAsyncThunk(
 );
 
 export const resetCartAsync = createAsyncThunk(
-  'cart/resetCart',
+  'https://mern-ecommerce-backend-khaki.vercel.app/cart/resetCart',
   async () => {
     const response = await resetCart();
     // The value we return becomes the `fulfilled` action payload

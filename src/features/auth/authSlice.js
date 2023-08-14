@@ -63,7 +63,7 @@ export const resetPasswordRequestAsync = createAsyncThunk(
 );
 
 export const resetPasswordAsync = createAsyncThunk(
-  'user/resetPassword',
+  'https://mern-ecommerce-backend-khaki.vercel.app/user/resetPassword',
   async (data,{rejectWithValue}) => {
     try {
       const response = await resetPassword(data);
@@ -78,7 +78,7 @@ export const resetPasswordAsync = createAsyncThunk(
 );
 
 export const signOutAsync = createAsyncThunk(
-  'user/signOut',
+  'https://mern-ecommerce-backend-khaki.vercel.app/user/signOut',
   async () => {
     const response = await signOut();
     // The value we return becomes the `fulfilled` action payload

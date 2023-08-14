@@ -20,7 +20,7 @@ const initialState = {
 
 
 export const fetchProductByIdAsync = createAsyncThunk(
-  'product/fetchProductById',
+  'https://mern-ecommerce-backend-khaki.vercel.app/product/fetchProductById',
   async (id) => {
     const response = await fetchProductById(id);
     // The value we return becomes the `fulfilled` action payload
@@ -29,7 +29,7 @@ export const fetchProductByIdAsync = createAsyncThunk(
 );
 
 export const fetchProductsByFiltersAsync = createAsyncThunk(
-  'product/fetchProductsByFilters',
+  'https://mern-ecommerce-backend-khaki.vercel.app/product/fetchProductsByFilters',
   async ({ filter, sort, pagination, admin }) => {
     const response = await fetchProductsByFilters(filter, sort, pagination, admin);
     // The value we return becomes the `fulfilled` action payload
@@ -38,7 +38,7 @@ export const fetchProductsByFiltersAsync = createAsyncThunk(
 );
 
 export const fetchBrandsAsync = createAsyncThunk(
-  'product/fetchBrands',
+  'https://mern-ecommerce-backend-khaki.vercel.app/product/fetchBrands',
   async () => {
     const response = await fetchBrands();
     // The value we return becomes the `fulfilled` action payload
@@ -46,7 +46,7 @@ export const fetchBrandsAsync = createAsyncThunk(
   }
 );
 export const fetchCategoriesAsync = createAsyncThunk(
-  'product/fetchCategories',
+  'https://mern-ecommerce-backend-khaki.vercel.app/product/fetchCategories',
   async () => {
     const response = await fetchCategories();
     // The value we return becomes the `fulfilled` action payload
@@ -55,7 +55,7 @@ export const fetchCategoriesAsync = createAsyncThunk(
 );
 
 export const createProductAsync = createAsyncThunk(
-  'product/create',
+  'https://mern-ecommerce-backend-khaki.vercel.app/product/create',
   async (product) => {
     const response = await createProduct(product);
     return response.data;
@@ -63,7 +63,7 @@ export const createProductAsync = createAsyncThunk(
 );
 
 export const updateProductAsync = createAsyncThunk(
-  'product/update',
+  'https://mern-ecommerce-backend-khaki.vercel.app/product/update',
   async (update) => {
     const response = await updateProduct(update);
     return response.data;

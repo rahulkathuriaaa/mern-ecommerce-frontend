@@ -10,7 +10,7 @@ const initialState = {
 //we may need more info of current order
 
 export const createOrderAsync = createAsyncThunk(
-  'order/createOrder',
+  'https://mern-ecommerce-backend-khaki.vercel.app/order/createOrder',
   async (order) => {
     const response = await createOrder(order);
     // The value we return becomes the `fulfilled` action payload
@@ -18,7 +18,7 @@ export const createOrderAsync = createAsyncThunk(
   }
 );
 export const updateOrderAsync = createAsyncThunk(
-  'order/updateOrder',
+  'https://mern-ecommerce-backend-khaki.vercel.app/order/updateOrder',
   async (order) => {
     const response = await updateOrder(order);
     // The value we return becomes the `fulfilled` action payload
@@ -27,7 +27,7 @@ export const updateOrderAsync = createAsyncThunk(
 );
 
 export const fetchAllOrdersAsync = createAsyncThunk(
-  'order/fetchAllOrders',
+  'https://mern-ecommerce-backend-khaki.vercel.app/order/fetchAllOrders',
   async ({sort, pagination}) => {
     const response = await fetchAllOrders(sort,pagination);
     // The value we return becomes the `fulfilled` action payload
