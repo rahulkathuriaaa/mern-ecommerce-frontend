@@ -10,7 +10,7 @@ export function fetchLoggedInUserOrders() {
 
 export function fetchLoggedInUser() {
   return new Promise(async (resolve) =>{
-    const response = await fetch('/users/own') 
+    const response = await fetch('https://mern-ecommerce-backend-khaki.vercel.app/users/own') 
     const data = await response.json()
     resolve({data})
   }
@@ -19,7 +19,7 @@ export function fetchLoggedInUser() {
 
 export function updateUser(update) {
   return new Promise(async (resolve) => {
-    const response = await fetch('/users/'+update.id, {
+    const response = await fetch('https://mern-ecommerce-backend-khaki.vercel.app/users/'+update.id, {
       method: 'PATCH',
       body: JSON.stringify(update),
       headers: { 'content-type': 'application/json' },
